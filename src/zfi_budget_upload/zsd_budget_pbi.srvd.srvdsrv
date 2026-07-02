@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZSD_BUDGET_PBI {
+  expose ZC_BUDGET_PBI;
+}

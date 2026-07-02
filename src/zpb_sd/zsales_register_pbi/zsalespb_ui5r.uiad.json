@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Register PB"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalespb"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_49F6903590EC4B273384717BB6D2587E439863D4_TM",
+    "semanticObject": "zsalespb",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_49F6903590EC4B273384717BB6D2587E439863D4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Register PB"
+      }
+    }
+  ]
+}

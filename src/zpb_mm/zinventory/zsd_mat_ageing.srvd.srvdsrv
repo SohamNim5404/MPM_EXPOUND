@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition Material Ageing'
+define service ZSD_MAT_AGEING {
+  expose ZC_MAT_AGE;
+}

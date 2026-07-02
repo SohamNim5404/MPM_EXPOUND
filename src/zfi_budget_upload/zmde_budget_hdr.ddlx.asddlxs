@@ -1,0 +1,95 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Budget Upload File',
+  typeNamePlural: 'Style Upload Files',
+  title: { type: #STANDARD, value: 'FileId' },
+  description: { type: #STANDARD, value: 'Filename' }
+}
+annotate entity ZC_BUDGET_HDR
+    with 
+{
+      /* -------------------- Facets -------------------- */
+  @UI.facet: [
+    {
+      id: 'idEndUser',
+      purpose: #HEADER,
+      position: 10,
+      type: #DATAPOINT_REFERENCE,
+      targetQualifier: 'tqEndUser'
+    },
+    {
+      id: 'idChgAt',
+      purpose: #HEADER,
+      position: 20,
+      type: #DATAPOINT_REFERENCE,
+      targetQualifier: 'tqChgAt'
+    },
+    {
+      id: 'idStatus',
+      purpose: #HEADER,
+      position: 30,
+      type: #DATAPOINT_REFERENCE,
+      targetQualifier: 'tqStatus'
+    },
+    {
+      id: 'idFile',
+      purpose: #STANDARD,
+      position: 50,
+      label: 'File Upload',
+      type: #IDENTIFICATION_REFERENCE
+    },
+    {
+      id: 'idData',
+      purpose: #STANDARD,
+      position: 60,
+      label: 'Budget Data Details',
+      type: #LINEITEM_REFERENCE,
+      targetElement: '_XLData'
+    }
+  ]
+
+  /* -------------------- End User & Actions -------------------- */
+  @UI.dataPoint: { qualifier: 'tqEndUser', title: 'Person Responsible' }
+  @UI.identification: [
+    { type: #FOR_ACTION, label: 'Upload Excel', dataAction: 'uploadExcelData' }
+    // Add any future posting actions here, e.g., { type: #FOR_ACTION, label: 'Post Styles', dataAction: 'post_styles' }
+  ]
+  EndUser;
+
+  /* -------------------- File Status -------------------- */
+  @UI.lineItem: [{ position: 20, label: 'File Status' }]
+  @UI.dataPoint: { qualifier: 'tqStatus', title: 'File Status' }
+  FileStatus;
+
+  /* -------------------- Attachment / File Details -------------------- */
+  @UI.identification: [{ position: 30, label: 'Select Excel File to Upload' }]
+  Attachment;
+
+  @UI.hidden: true
+  Mimetype;
+
+  @UI.lineItem: [{ position: 30, label: 'Filename' }]
+//  @UI.identification: [{ position: 40, label: 'Filename' }]
+  Filename;
+
+//  @UI.lineItem: [{ position: 40, label: 'Style Name (Header)' }]
+//  @UI.identification: [{ position: 50, label: 'Style Name (Header)' }]
+//  Stylename;
+
+  /* -------------------- Audit Information -------------------- */
+  @UI.lineItem: [{ position: 40, label: 'Created by' }]
+  LocalCreatedBy;
+
+  @UI.lineItem: [{ position: 50, label: 'Created date' }]
+  LocalCreatedAt;
+
+  @UI.hidden: true
+  LocalLastChangedBy;
+
+  @UI.dataPoint: { qualifier: 'tqChgAt', title: 'Last Changed At' }
+  LocalLastChangedAt;
+  
+  @UI.hidden: true
+  LastChangedAt;
+    
+}

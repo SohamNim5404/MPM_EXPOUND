@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for COGM PB'
+define service ZSD_COGM_PB {
+  expose ZCOGM_PB;
+}

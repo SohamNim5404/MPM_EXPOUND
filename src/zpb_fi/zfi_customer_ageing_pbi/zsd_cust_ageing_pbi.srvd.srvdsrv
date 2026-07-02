@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination'
+define service ZSD_CUST_AGEING_PBI {
+  expose ZC_CUSTOMER_AGE;
+}

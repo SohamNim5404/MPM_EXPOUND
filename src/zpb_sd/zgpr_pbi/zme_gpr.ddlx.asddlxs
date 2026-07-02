@@ -1,0 +1,157 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: { typeName: 'Customer Profitability', typeNamePlural: 'Customer Profitability Reports' }
+annotate view ZC_GPR with 
+{
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10, label: 'Invoice No.' }]
+  InvoiceNumber;
+
+  @UI.lineItem: [{ position: 20, label: 'Item' }]
+  InvoiceItem;
+
+  @UI.lineItem: [{ position: 30, label: 'Split' }]
+  SplitItemKey;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 40, label: 'Invoice Date' }]
+  InvoiceDate;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 50, label: 'Customer' }]
+  CustomerNumber;
+
+  @UI.lineItem: [{ position: 60, label: 'Customer Name' }]
+  CustomerName;
+
+  @UI.lineItem: [{ position: 70, label: 'Material' }]
+  Product;
+
+  @UI.lineItem: [{ position: 80, label: 'Description' }]
+  Description;
+
+  @UI.lineItem: [{ position: 90, label: 'Batch' }]
+  BatchNumber;
+
+  @UI.lineItem: [{ position: 100, label: 'Quantity' }]
+  Quantity;
+
+  @UI.lineItem: [{ position: 110, label: 'Unit Price' }]
+  UnitPrice;
+
+  @UI.lineItem: [{ position: 115, label: 'Exact Net Value' }]
+  ExactNetValue;
+
+  @UI.lineItem: [{ position: 120, label: 'Assessable Value' }]
+  AssessableValue;
+
+  @UI.lineItem: [{ position: 130, label: 'Total COGM' }]
+  TotalCOGM;
+
+  @UI.lineItem: [{ position: 140, label: 'Freight' }]
+  Freight;
+
+  @UI.lineItem: [{ position: 150, label: 'Total Profit' }]
+  TotalProfitValue;
+
+  @UI.lineItem: [{ position: 160, label: 'Profit %', criticality: 'StatusCriticality' }]
+  ProfitPercentAss;
+
+  @UI.lineItem: [{ position: 170, label: 'Status', criticality: 'StatusCriticality' }]
+  OverallStatus;
+
+  @UI.lineItem: [{ position: 180, label: 'Sales Org' }]
+  SalesOrganization;
+
+  @UI.lineItem: [{ position: 190, label: 'Dist. Channel ID' }]
+  DistributionChannel;
+
+  @UI.lineItem: [{ position: 195, label: 'Dist. Channel Name' }]
+  DistributionChannelName;
+
+  @UI.lineItem: [{ position: 200, label: 'Division ID' }]
+  Division;
+
+  @UI.lineItem: [{ position: 205, label: 'Division Name' }]
+  DivisionName;
+
+  @UI.lineItem: [{ position: 208, label: 'Sales Office ID' }]
+  SalesOffice;
+
+  @UI.lineItem: [{ position: 210, label: 'Sales Office Name' }]
+  SalesOfficeName;
+
+  @UI.lineItem: [{ position: 215, label: 'Sales Group ID' }]
+  SalesGroup;
+
+  @UI.lineItem: [{ position: 220, label: 'Sales Group Name' }]
+  SalesGroupName;
+
+  @UI.lineItem: [{ position: 225, label: 'Product Group ID' }]
+  ProductGroup;
+
+  @UI.lineItem: [{ position: 230, label: 'Product Group Name' }]
+  ProductGroupName;
+
+  @UI.lineItem: [{ position: 235, label: 'Ext. Prod Group ID' }]
+  ExternalProductGroup;
+
+  @UI.lineItem: [{ position: 245, label: 'Ext. Prod Group Name' }]
+  ExternalProductGroupName;
+
+  @UI.lineItem: [{ position: 250, label: 'City' }]
+  City;
+
+  @UI.lineItem: [{ position: 260, label: 'Plant' }]
+  Plant;
+
+  @UI.lineItem: [{ position: 270, label: 'Unit COGM' }]
+  UnitCogmValue;
+
+  @UI.lineItem: [{ position: 280, label: 'RM Cost' }]
+  UnitRMCost;
+
+  @UI.lineItem: [{ position: 290, label: 'Scrap Value' }]
+  UnitScrapValue;
+
+  @UI.lineItem: [{ position: 300, label: 'Scrap %' }]
+  ScrapPercentage;
+
+  @UI.lineItem: [{ position: 310, label: 'Overhead' }]
+  UnitOverheadValue;
+
+  @UI.lineItem: [{ position: 320, label: 'Fixed OH' }]
+  UnitFixedOverhead;
+
+  @UI.lineItem: [{ position: 330, label: 'Labour' }]
+  UnitLabour;
+
+  @UI.lineItem: [{ position: 340, label: 'Aux Power' }]
+  UnitAuxPower;
+
+  @UI.lineItem: [{ position: 350, label: 'Power' }]
+  UnitPower;
+
+  @UI.lineItem: [{ position: 360, label: 'Var Overhead' }]
+  UnitVarOverhead;
+
+  @UI.lineItem: [{ position: 370, label: 'Doc Currency' }]
+  DocumentCurrency;
+
+  @UI.lineItem: [{ position: 380, label: 'CC Currency' }]
+  CompanyCodeCurrency;
+
+  @UI.lineItem: [{ position: 390, label: 'UoM' }]
+  UnitOfMeasure;
+
+  @UI.lineItem: [{ position: 400, label: 'Base Unit' }]
+  MaterialBaseUnit;
+
+  @UI.lineItem: [{ position: 410, label: 'Status Code' }]
+  StatusCriticality;
+
+  @UI.lineItem: [{ position: 420, label: 'Unit Profit' }]
+  UnitProfitValue;
+
+  @UI.lineItem: [{ position: 430, label: 'Profit Value' }]
+  ProfitValue;
+}

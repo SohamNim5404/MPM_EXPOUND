@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for GPR for Power BI'
+define service ZSD_GPR_PBI {
+  expose ZC_GPR;
+}

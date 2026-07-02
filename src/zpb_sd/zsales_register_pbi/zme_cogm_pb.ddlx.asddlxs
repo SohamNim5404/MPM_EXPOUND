@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+@UI.headerInfo : {
+typeName: 'COGM_PB',
+typeNamePlural: 'COGM_PB',
+typeImageUrl: 'sap-icon://customer-order-entry',
+title:{ type: #STANDARD, value: 'Billingdocument' }
+}
+annotate entity ZCOGM_PB with
+{
+
+  @UI.facet: [
+  {
+  id: 'Billingdocument',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'COGM Details',
+  position: 10
+  }
+  ]
+
+  @UI.selectionField: [{ position: 10 }]
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Billing Document'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BillingDocument', element: 'BillingDocument' } }]
+  Billingdocument;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Billing Document Item'
+  Billingdocumentitem;
+
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Plant'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Plant', element: 'Plant' } }]
+  Plant;
+
+  @UI.selectionField: [{ position: 30 }]
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Product'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_ProductDescription', element: 'Product' } }]
+  Product;
+
+  @UI.selectionField: [{ position: 40 }]
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Batch'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_MaterialDocumentItem_2', element: 'Batch' } }]
+  Batch;
+
+  @UI.selectionField: [{ position: 50 }]
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Order ID'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_MaterialDocumentItem_2', element: 'OrderID' } }]
+  Orderid;
+
+  @UI.selectionField: [{ position: 60 }]
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'Delivery Note'
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_DeliveryDocument', element: 'DeliveryDocument' } }]
+  Deliverynote;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Freight'
+  Freight;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'COGM'
+  Cogm;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Scrap'
+  Scrap;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'RM Cost'
+  Rmcost;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Overhead'
+  Overhead;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Fixed Overhead'
+  Fixedoverhead;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @EndUserText.label: 'Labour'
+  Labour;
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @EndUserText.label: 'Auxiliary Power'
+  AuxPower;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @EndUserText.label: 'Power'
+  Power;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @EndUserText.label: 'Variable Overhead'
+  Variableoverhead;
+
+}

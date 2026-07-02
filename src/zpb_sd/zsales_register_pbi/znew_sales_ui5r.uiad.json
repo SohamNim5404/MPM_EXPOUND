@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Sales Register (Power BI)"
+  },
+  "ui5AppDetails": {
+    "appId": "znewsales"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F2E55026A198A84E381AB17782DBA1411019FD50_TM",
+    "semanticObject": "znew_sales",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F2E55026A198A84E381AB17782DBA1411019FD50_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Register (Power BI)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination'
+define service ZSD_DASHBOARD {
+  expose ZC_DASH;
+}

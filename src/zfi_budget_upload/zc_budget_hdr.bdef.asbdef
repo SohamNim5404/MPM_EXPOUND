@@ -1,0 +1,28 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_BUDGET_HDR alias XLHead
+{
+  use create;
+  use update;
+  use delete;
+
+  use action uploadExcelData;
+
+  use action Activate;
+  use action Edit;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _XLData { create; with draft; }
+}
+
+define behavior for ZC_BUDGET_ITEM alias XLData
+{
+  use update;
+  use delete;
+
+  use association _XLUser { with draft; }
+}

@@ -1,0 +1,36 @@
+managed implementation in class zbp_cogm_pb unique;
+strict ( 2 );
+
+define behavior for ZCOGM_PB //alias <alias_name>
+persistent table ztb_cogm_pb
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly : update ) Billingdocument, Billingdocumentitem, Plant, Product, Batch;
+
+  mapping for ztb_cogm_pb
+    {
+      Billingdocument     = billingdocument;
+      Billingdocumentitem = billingdocumentitem;
+      Plant               = plant;
+      Product             = product;
+      Batch               = batch;
+      Orderid             = orderid;
+      Deliverynote        = deliverynote;
+      Freight             = freight;
+      Cogm                = cogm;
+      Scrap               = scrap;
+      Rmcost              = rmcost;
+      Overhead            = overhead;
+      Fixedoverhead       = fixedoverhead;
+      Labour              = labour;
+      AuxPower            = aux_power;
+      Power               = power;
+      Variableoverhead    = variableoverhead;
+    }
+
+}

@@ -1,0 +1,132 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Budget Item',
+  typeNamePlural: 'Budget Items',
+  title: { type: #STANDARD, value: 'UniqueId' },
+  description: { type: #STANDARD, value: 'CustCat' }
+}
+annotate entity ZC_BUDGET_ITEM
+    with 
+{
+  /* -------------------- Facets -------------------- */
+  @UI.facet: [
+    {
+      id:       'idGeneral',
+      purpose:  #STANDARD,
+      type:     #IDENTIFICATION_REFERENCE,
+      label:    'General Information',
+      position: 10
+    }
+  ]
+  
+  /* -------------------- Keys (Hidden) -------------------- */
+  @UI.hidden: true
+  EndUser;
+
+  @UI.hidden: true
+  FileId;
+
+  @UI.hidden: true
+  LineId;
+
+  /* -------------------- Visible Fields -------------------- */
+  @UI.lineItem:       [{ position: 10, label: 'Row No.' }]
+  @UI.identification: [{ position: 10, label: 'Row No.' }]
+  Line_No;
+  
+  @UI.lineItem:       [{ position: 20, label: 'Unique No.' }]
+  @UI.identification: [{ position: 20, label: 'Unique No.' }]
+  UniqueId;
+  
+  @UI.lineItem:       [{ position: 30, label: 'Customer Category' }]
+  @UI.identification: [{ position: 30, label: 'Customer Category' }]
+  CustCat;
+    
+  @UI.lineItem:       [{ position: 40, label: 'Sales Office Code' }]
+  @UI.identification: [{ position: 40, label: 'Sales Office Code' }]
+  SalesOfficeCode;
+    
+  @UI.lineItem:       [{ position: 50, label: 'Sales Office Location' }]
+  @UI.identification: [{ position: 50, label: 'Sales Office Location' }]
+  SalesOfficeLoc;
+  
+  // ==========================================
+  // THE FIX: Adding the UI tags to un-hide them!
+  // ==========================================
+  @UI.lineItem:       [{ position: 51, label: 'Sales Group' }]
+  @UI.identification: [{ position: 51, label: 'Sales Group' }]
+  SalesGroup;
+  
+  @UI.lineItem:       [{ position: 52, label: 'Sales Group Text' }]
+  @UI.identification: [{ position: 52, label: 'Sales Group Text' }]
+  SalesGroupText;
+    
+  @UI.lineItem:       [{ position: 60, label: 'Customer Code' }]
+  @UI.identification: [{ position: 60, label: 'Customer Code' }]
+  CustCode;
+    
+  @UI.lineItem:       [{ position: 70, label: 'Customer Name' }]
+  @UI.identification: [{ position: 70, label: 'Customer Name' }]
+  CustName;
+    
+  @UI.lineItem:       [{ position: 80, label: 'Product Code' }]
+  @UI.identification: [{ position: 80, label: 'Product Code' }]
+  ProdCode;
+    
+  @UI.lineItem:       [{ position: 90, label: 'Product Name' }]
+  @UI.identification: [{ position: 90, label: 'Product Name' }]
+  ProdName;
+    
+  @UI.lineItem:       [{ position: 100, label: 'Month (Text)' }]
+  @UI.identification: [{ position: 100, label: 'Month (Text)' }]
+  MonthInText;
+    
+  @UI.lineItem:       [{ position: 110, label: 'Month (No.)' }]
+  @UI.identification: [{ position: 110, label: 'Month (No.)' }]
+  MonthInNo;
+    
+  @UI.lineItem:       [{ position: 120, label: 'Projected Unit Price' }]
+  @UI.identification: [{ position: 120, label: 'Projected Unit Price' }]
+  ProjectedUnitPrice;
+    
+  @UI.lineItem:       [{ position: 130, label: 'Projection (Qty)' }]
+  @UI.identification: [{ position: 130, label: 'Projection (Qty)' }]
+  ProjectionInQty;
+    
+  @UI.lineItem:       [{ position: 140, label: 'Projection (Value)' }]
+  @UI.identification: [{ position: 140, label: 'Projection (Value)' }]
+  ProjectionInValue;
+    
+  @UI.lineItem:       [{ position: 150, label: 'Potential' }]
+  @UI.identification: [{ position: 150, label: 'Potential' }]
+  Potential;
+    
+  @UI.lineItem:       [{ position: 160, label: 'Sales Person' }]
+  @UI.identification: [{ position: 160, label: 'Sales Person' }]
+  SalesPerson;
+    
+  @UI.lineItem:       [{ position: 170, label: 'Segment' }]
+  @UI.identification: [{ position: 170, label: 'Segment' }]
+  Segment;
+    
+  @UI.lineItem:       [{ position: 180, label: 'Product Family' }]
+  @UI.identification: [{ position: 180, label: 'Product Family' }]
+  ProductFamily;
+  
+  /* -------------------- Audit & Associations (Hidden) -------------------- */
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+
+  @UI.hidden: true
+  _XLUser;
+    
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service defintion for budget upload tool'
+define service ZSD_BUDGET_HDR {
+  expose ZC_BUDGET_HDR;
+  expose ZC_BUDGET_ITEM;
+}

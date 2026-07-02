@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for collection report'
+define service ZSD_COLL_REP {
+  expose ZI_COLL_REP;
+}

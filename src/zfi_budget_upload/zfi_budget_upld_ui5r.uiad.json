@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Budget Upload"
+  },
+  "ui5AppDetails": {
+    "appId": "zfibudgetupld"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A3F45D247E6CF8EFED2A9019E08DFFCC21FAAF40_TM",
+    "semanticObject": "zfi_budget_upld",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A3F45D247E6CF8EFED2A9019E08DFFCC21FAAF40_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Budget Upload",
+        "icon": "sap-icon://upload"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Production-PBI"
+  },
+  "ui5AppDetails": {
+    "appId": "zproductionpbi"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6348FB11D7013D43CC7DC7C86E00F34351B211C0_TM",
+    "semanticObject": "zproduction",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6348FB11D7013D43CC7DC7C86E00F34351B211C0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Production-PBI"
+      }
+    }
+  ]
+}

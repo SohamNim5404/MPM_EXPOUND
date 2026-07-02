@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination Power BI Customer Ageing'
+define service ZSD_CUSTOMER_AGEING_PBI {
+  expose ZCE_CUSTOMER_AGEING_PBI;
+}

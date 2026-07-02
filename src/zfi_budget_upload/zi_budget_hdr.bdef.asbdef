@@ -1,0 +1,105 @@
+managed implementation in class zbp_i_budget_hdr unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZI_BUDGET_HDR alias XLHead //alias <alias_name>
+persistent table zdb_budget_hdr
+lock master
+total etag LastChangedAt
+authorization master ( global, instance )
+draft table zdb_bdgt_hdr_d
+early numbering
+etag master LocalLastChangedAt
+
+//etag master <field_name>
+{
+    create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) EndUser, FileId;
+  association _XLData { create;  with draft; }
+
+
+  action uploadExcelData result [1] $self;
+//  action grn_create result [1] $self;
+
+  determination FillFileStatus on modify { field EndUser; }
+
+  determination FillSelectedStatus on modify { field Attachment; }
+  side effects
+  {
+    field Attachment affects field FileStatus;
+
+//    action uploadExcelData affects $self, messages;
+    action uploadExcelData affects $self, entity _XLData, field FileStatus;
+    //    action grn_create affects $self, messages;
+  }
+
+  draft action Activate optimized;
+  draft action Edit;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for zdb_budget_hdr
+    {
+      EndUser            = end_user;
+      FileId             = file_id;
+      FileStatus         = file_status;
+      Attachment         = attachment;
+      Mimetype           = mimetype;
+      Filename           = filename;
+//      Stylename          = stylename;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+}
+
+define behavior for ZI_BUDGET_ITEM alias XLData //alias <alias_name>
+persistent table zdb_budget_item
+draft table zdb_bdgt_itm_d
+lock dependent by _XLUser
+authorization dependent by _XLUser
+etag dependent by _XLUser
+{
+  update;
+  delete;
+  field ( readonly ) EndUser, FileId, Line_No;
+   field ( readonly, numbering : managed ) LineId;
+  association _XLUser { with draft; }
+
+mapping for zdb_budget_item
+  {
+    EndUser            = end_user;
+    FileId             = file_id;
+    LineId             = line_id;
+    Line_No            = line_no;
+    UniqueId           = unique_id;
+    CustCat            = cust_cat;
+    SalesOfficeCode    = sales_office_code;
+    SalesOfficeLoc     = sales_office_loc;
+    CustCode           = cust_code;
+    CustName           = cust_name;
+    ProdCode           = prod_code;
+    ProdName           = prod_name;
+    MonthInText        = month_in_text;
+    MonthInNo          = month_in_no;
+    ProjectedUnitPrice = projected_unit_price;
+    ProjectionInQty    = projection_in_qty;
+    ProjectionInValue  = projection_in_value;
+    Potential           = potential;
+    SalesPerson        = sales_person;
+    Segment            = segment;
+    ProductFamily      = product_family;
+    CreatedBy          = created_by;
+    CreatedAt          = created_at;
+    LastChangedBy      = last_changed_by;
+    LastChangedAt      = last_changed_at;
+  }
+
+
+}

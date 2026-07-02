@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition forSALES REGISTER NEW'
+define service ZSD_SALES_REGISTER_NEW_PB {
+  expose ZCE_SALES_REGISTER_NEW_PB;
+}

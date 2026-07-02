@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Bank Collection Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zcollrep"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_6DB82FDF40ACFC711A109FC6C37A40C9A49DFCBC_TM",
+    "semanticObject": "zcoll_rep",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_6DB82FDF40ACFC711A109FC6C37A40C9A49DFCBC_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Bank Collection Report"
+      }
+    }
+  ]
+}
